@@ -32,21 +32,15 @@
   *::before{
     box-sizing: border-box;
   }
-  body{
-    margin: 0;
-    background-color: var(--clr-accent-400);
-    color: var(--clr-neutral-100);
-    font-family: var(--ff-base);
-    font-size: var(--fs-300) ;
-    font-weight: var(--fw-regular);
-  }
+
 /* Footer area */
 .container3{
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background: #3e3e4b52;;
+    background: #282c2c;
+    color: var(--clr-neutral-100);
   }
   .container3 img{
     margin-left: 10rem;

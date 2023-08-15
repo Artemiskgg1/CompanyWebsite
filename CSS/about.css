@@ -14,7 +14,7 @@
     --fw-regular: 300;
     --fw-semi-bold: 400;
     --fw-bold: 700;
-  
+
     --fs-200: 0.875rem;
     --fs-300: 1rem;
     --fs-400: 1.125rem;
@@ -62,4 +62,6 @@ body{
 }
 .paragraph h2{
     font-family: var(--ff-heading);
+    border-left: 3px solid var(--clr-secondary-400);
+    padding-left: 1rem;
 }
