@@ -59,6 +59,7 @@ body{
 .paragraph p{
     margin-top: 14px;
     margin-bottom: 26px;
+    font-family: var(--ff-base);
 }
 .paragraph h2{
     font-family: var(--ff-heading);

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Engineers</title>
+    <link rel="stylesheet" href="/CSS/contact.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;700&family=Outfit:wght@300;400;700&family=Poppins:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+</head>
+
+<body>
+    <script>
+        // Fetch and insert header content
+        fetch('header.html')
+            .then(response => response.text())
+            .then(content => {
+                const header = document.createElement('div');
+                header.innerHTML = content;
+                document.body.prepend(header);
+            });
+
+        // Fetch and insert footer content
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(content => {
+                const footer = document.createElement('div');
+                footer.innerHTML = content;
+                document.body.appendChild(footer);
+            });
+    </script>
+    <h1 class="main-heading">CONTACT US</h1>
+    <div class="container">
+        <section class="getInTouch">
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/visit.png" alt="visit" class="icons"/>
+            <div class="visitUs">
+                <h4>Office</h4>
+                <p>Hogsmede<br>Hogwards School of Witchcraft and Wizardry<br>London<br>1022017</p>
+            </div>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/mail.png" alt="mail" class="icons"/>
+            <div class="message">
+                <h4>Email Address</h4>
+                <p>artemisgarth@gmail.com</p>
+            </div>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/phone-disconnected.png" alt="phone-disconnected" class="icons"/>
+            <div class="callUs">
+                <h4>Call Us</h4>
+                <p>+91 9811983346</p>
+            </div>
+        </section>
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name " required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="4" placeholder="Write Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "abhaghildiyal@gmail.com",
+                Password: "04447C88D3B8B1EBDF176D71D1BC1EA66EDF",
+                To: 'abhaghildiyal@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Equiry",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+</body>
+
+</html>
