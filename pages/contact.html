@@ -55,7 +55,7 @@
             <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/phone-disconnected.png" alt="phone-disconnected" class="icons"/>
             <div class="callUs">
                 <h4>Call Us</h4>
-                <p>+91 9811983346</p>
+                <p>+91 98XXXXXXXX</p>
             </div>
         </section>
         <form onsubmit="sendEmail(); reset(); return false;">
@@ -68,21 +68,6 @@
         </form>
     </div>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "abhaghildiyal@gmail.com",
-                Password: "04447C88D3B8B1EBDF176D71D1BC1EA66EDF",
-                To: 'abhaghildiyal@gmail.com',
-                From: document.getElementById("email").value,
-                Subject: "New Contact Form Equiry",
-                Body: "And this is the body"
-            }).then(
-                message => alert(message)
-            );
-        }
-    </script>
 </body>
 
 </html>
