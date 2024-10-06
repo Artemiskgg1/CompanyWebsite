@@ -2,7 +2,7 @@
 
 Welcome to **NexaSite**😎 - where creativity meets code! This project is a playground for innovative web design, built with HTML and CSS, and open to JavaScript enhancements. It's more than just a website; it's a canvas for your digital imagination!
 
-![NexaSite](https://socialify.git.ci/Artemiskgg1/NexaSite/image?description=1&descriptionEditable=It%27s%20a%20canvas%20for%20your%20digital%20imagination!%E2%9C%A8&forks=1&name=1&owner=1&pattern=Solid&pulls=1&stargazers=1&theme=Dark)
+<div align="center"><img src="https://socialify.git.ci/Artemiskgg1/NexaSite/image?forks=1&name=1&owner=1&pattern=Solid&pulls=1&stargazers=1&theme=Dark" alt="NexaSite" width="660" height="320" /></div>
 
 ## 🌟 Features
 - 🎨 Creative and modern UI designs
