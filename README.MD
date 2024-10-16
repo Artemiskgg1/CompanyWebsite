@@ -1,4 +1,4 @@
-# ✨ NexaSite
+<h1 align="center">✨ NexaSite</h1>
 
 Welcome to **NexaSite**😎 - where creativity meets code! This project is a playground for innovative web design, built with HTML and CSS, and open to JavaScript enhancements. It's more than just a website; it's a canvas for your digital imagination!
 
@@ -33,7 +33,39 @@ You'll need a basic understanding of HTML and CSS to contribute to this project.
 ## Contributing
 Interested in making some changes or suggesting ideas? Check out the [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get involved.
 
+<hr>
+
+
+<h2 align = "center">Our Contributors ❤️</h2>
+
+<a href="https://github.com/Artemiskgg1/NexaSite/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Artemiskgg1/NexaSite" />
+</a>
+
+<hr>
+
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
+<hr>
+
+<div>
+  <h2><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64f_1f3fb/512.webp" width="35" height="35"> Support </h2>
+</div>
+
+<div>
+  Don't forget to leave a star<img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31f/512.webp" width="35" height="30"> for this project!
+</div>
+
+<hr>
+
 <p align="center">Made with ❤️ and ☕ by Abha Ghildiyal</p>
+
+<hr>
+
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>
