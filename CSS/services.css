@@ -1,49 +1,178 @@
-:root{
-    --clr-neutral-100: hsla(0, 0%, 100%, 1);
-    --clr-primary-800: hsla(229, 47%, 17%, 1);
-    --clr-primary-700: hsla(229, 43%, 20%, 1);
-    --clr-primary-400: hsla(230, 50%, 58%, 0.3);
-    --clr-primary-300: hsla(229, 36%, 39%, 1);
-    --clr-primary-200: hsla(229, 21%, 53%, 1);
-    --clr-accent-400: rgb(28, 29, 30);
-    --clr-secondary-400: hsla(229, 78%, 60%, 1);
-   
-    --ff-heading:  'Chakra Petch', sans-serif;
-    --ff-base: 'Outfit', sans-serif;
-  
-    --fw-regular: 300;
-    --fw-semi-bold: 400;
-    --fw-bold: 700;
-
-    --fs-200: 0.875rem;
-    --fs-300: 1rem;
-    --fs-400: 1.125rem;
-    --fs-500: 1.375rem;
-    --fs-600: 1.75rem;
-    --fs-700: clamp(5rem, 10vw - 0.5rem, 3.25rem);
-}
+@import "variables.css";
 
 html {
     margin: 0;
-    padding: 0; 
+    padding: 0;
     width: 100%;
 }
 
-img{
+img {
     max-width: 100%;
     display: block;
-  
 }
-  *,
-  *::after,
-  *::before{
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
-body{
+body {
     margin: 0;
     background-color: #eee;
     color: var(--clr-accent-400);
     font-family: var(--ff-base);
-    font-size: var(--fs-300) ;
+    font-size: var(--fs-300);
     font-weight: var(--fw-regular);
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.div-p1 {
+    padding: 40px 80px;
+}
+
+.serv {
+    padding: 3rem 0rem;
+    text-align: center;
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #cdebbc;
+}
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+#feature .fe-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+#feature .fe-box:nth-child(6) h6 {
+    background-color: #fff2e5;
+}
+
+/* Product Section Styles */
+.product-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product-details h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.product-description {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.button-buy {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.button-buy:hover {
+    background-color: #0056b3;
 }
