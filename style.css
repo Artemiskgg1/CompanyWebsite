@@ -95,8 +95,30 @@ nav li {
   position: relative;
 }
 nav li a {
+  position: relative;
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+nav li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--clr-secondary-400);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav li a:hover {
+  color: var(--clr-secondary-400);
+}
+
+nav li a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .heading-grid {
@@ -308,8 +330,30 @@ div.custom-aside {
   margin: 1rem;
 }
 .footerabout li a {
+  position: relative;
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+.footerabout li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--clr-secondary-400);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footerabout li a:hover {
+  color: var(--clr-secondary-400);
+}
+
+.footerabout li a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .services-col {
