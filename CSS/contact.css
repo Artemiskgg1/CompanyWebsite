@@ -1,25 +1,5 @@
-:root{
-    --clr-neutral-100: hsla(0, 0%, 100%, 1);
-    --clr-primary-800: hsla(229, 47%, 17%, 1);
-    --clr-primary-700: hsla(229, 43%, 20%, 1);
-    --clr-primary-400: hsla(230, 50%, 58%, 0.3);
-    --clr-accent-400: rgb(28, 29, 30);
-    --clr-secondary-400: hsla(229, 78%, 60%, 1);
-   
-    --ff-heading:  'Chakra Petch', sans-serif;
-    --ff-base: 'Outfit', sans-serif;
-  
-    --fw-regular: 300;
-    --fw-semi-bold: 400;
-    --fw-bold: 700;
-  
-    --fs-200: 0.875rem;
-    --fs-300: 1rem;
-    --fs-400: 1.125rem;
-    --fs-500: 1.375rem;
-    --fs-600: 1.75rem;
-    --fs-700: clamp(5rem, 10vw - 0.5rem, 3.25rem);
-  }
+@import 'variables.css';
+
   img{
     max-width: 100%;
     display: block; 
