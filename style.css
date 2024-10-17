@@ -280,10 +280,16 @@ div.custom-aside {
   overflow: hidden;
   /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 14% 100%, 0 83%); */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.184);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 .services-col img {
   width: 100%;
   display: block;
+}
+
+.services-col:hover{
+  transform: scale(1.12);
 }
 
 /* Footer area */
