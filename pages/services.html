@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Shubham Engineers</title>
-        <link rel="stylesheet" href="../CSS/variables.css">
+        <title>NexaSite</title>
+        <link rel="stylesheet" href="../CSS/variables.css" />
         <link rel="stylesheet" href="../CSS/services.css" />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,26 +32,144 @@
             href="/public/favicon-16x16.png"
         />
         <link rel="manifest" href="/public/site.webmanifest" />
+        <link rel="stylesheet" href="../style.css" />
     </head>
     <body>
-        <script>
-            // Fetch and insert header content
-            fetch("header.html")
-                .then((response) => response.text())
-                .then((content) => {
-                    const header = document.createElement("div");
-                    header.innerHTML = content;
-                    document.body.prepend(header);
-                });
+        <header>
+            <div class="upper-navbar">
+                <a href="../index.html">
+                    <img
+                        src="../pic/LogoLight1.svg"
+                        alt="SE-Logo"
+                        class="logo"
+                    />
+                </a>
+                <ul class="contact-info">
+                    <p class="phone-number">+91 98XXXXXXXX</p>
+                    <a href="contact.html">
+                        <button class="button-contact">CONTACT US</button>
+                    </a>
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li>
+                        <a href="services.html">Product and Services</a>
+                    </li>
+                    <li><a href="#">Manufacturing Process</a></li>
+                    <li><a href="#">Research Development</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            // Fetch and insert footer content
-            fetch("footer.html")
-                .then((response) => response.text())
-                .then((content) => {
-                    const footer = document.createElement("div");
-                    footer.innerHTML = content;
-                    document.body.appendChild(footer);
-                });
-        </script>
+        <!-- Services -->
+        <section class="" style="background-color: white">
+            <h1 class="serv">Services</h1>
+            <div id="feature" class="div-p1">
+                <div class="fe-box">
+                    <img src="../pic/services Png/f1.png" alt="" />
+                    <h6>Free Shiping</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="../pic/services Png/f2.png" alt="" />
+                    <h6>Online Order</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="../pic/services Png/f3.png" alt="" />
+                    <h6>Save Money</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="../pic/services Png/f4.png" alt="" />
+                    <h6>Promotions</h6>
+                </div>
+                <div class="fe-box">
+                    <img src="../pic/services Png/f5.png" alt="" />
+                    <h6>Happy Sell</h6>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product -->
+        <section class="product-section" style="background-color: white">
+            <h1 class="serv">Our Products</h1>
+            <div class="product-container">
+                <div class="product-card">
+                    <img
+                        src="../pic/Cement Elevator Wing Pulley.jpg"
+                        alt="Product 1"
+                        class="product-image"
+                    />
+                    <div class="product-details">
+                        <h4>Product Name 1</h4>
+                        <p class="product-description">
+                            This is a brief description of Product 1. It
+                            highlights key features and benefits.
+                        </p>
+                        <button class="button-buy">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img
+                        src="../pic/Cement Elevator Wing Pulley.jpg"
+                        alt="Product 2"
+                        class="product-image"
+                    />
+                    <div class="product-details">
+                        <h4>Product Name 2</h4>
+                        <p class="product-description">
+                            This is a brief description of Product 2. It
+                            highlights key features and benefits.
+                        </p>
+                        <button class="button-buy">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img
+                        src="../pic/Cement Elevator Wing Pulley.jpg"
+                        alt="Product 3"
+                        class="product-image"
+                    />
+                    <div class="product-details">
+                        <h4>Product Name 3</h4>
+                        <p class="product-description">
+                            This is a brief description of Product 3. It
+                            highlights key features and benefits.
+                        </p>
+                        <button class="button-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div class="container3">
+                <img src="../pic/LogoLight1.svg" alt="" />
+                <div class="footerabout">
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li>
+                            <a href="services.html">Product and Services</a>
+                        </li>
+                        <li><a href="#">Manufacturing Process</a></li>
+                        <li><a href="#">Research Development</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="address">
+                    <h2>+91 98XXXXXXXX</h2>
+                    <p>
+                        Hogsmede<br />Hogwards School of Witchcraft and
+                        Wizardry<br />London<br />1022017
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
