@@ -53,3 +53,40 @@
     text-decoration: none;
     color: inherit;
   }
+/* Footer Social Icons */
+.social-icons {
+  margin-top: 20px;
+  float:right;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  background-color: white;
+  border-radius: 17%;
+  padding: 8px; /* Increased padding for better appearance */
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000; /* Default color */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Apply Brand Colors on Hover */
+.social-icons a[aria-label="Facebook"]:hover {
+  background-color: #1877F2; /* Facebook Blue */
+  color: #ffffff; /* White text for contrast */
+}
+
+.social-icons a[aria-label="Twitter"]:hover {
+  background-color: #000000; /* Twitter Blue */
+  color: #ffffff; /* White text for contrast */
+}
+
+.social-icons a[aria-label="LinkedIn"]:hover {
+  background-color: #0077B5; /* LinkedIn Blue */
+  color: #ffffff; /* White text for contrast */
+}
+
+.social-icons a[aria-label="Instagram"]:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram Pink */
+  color: #ffffff; /* White text for contrast */
+}
