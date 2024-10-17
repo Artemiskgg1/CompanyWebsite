@@ -39,9 +39,12 @@
                 .then((content) => {
                     const header = document.createElement("div");
                     header.innerHTML = content;
+                    header.style.backgroundColor='black';
                     document.body.prepend(header);
                 });
-
+        </script>
+        </br>
+        <script>
             // Fetch and insert footer content
             fetch("footer.html")
                 .then((response) => response.text())
