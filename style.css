@@ -45,8 +45,7 @@ body {
     url("/pic/Factory_Shed.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: clamp(90vh, 650px, 100vh); */
-  height: 90vh;
+  height: clamp(90vh, 650px, 100vh);
   clip-path: polygon(0% 0%, 100% 0, 100% 86%, 95% 100%, 0% 100%);
 }
 
