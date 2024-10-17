@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Shubham Engineers</title>
+        <title>NexaSite</title>
+        <link rel="stylesheet" href="../CSS/variables.css" />
+        <link rel="stylesheet" href="../CSS/services.css" />
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,29 +32,95 @@
             href="/public/favicon-16x16.png"
         />
         <link rel="manifest" href="/public/site.webmanifest" />
+        <link rel="stylesheet" href="../style.css" />
     </head>
     <body>
-        <script>
-            // Fetch and insert header content
-            fetch("header.html")
-                .then((response) => response.text())
-                .then((content) => {
-                    const header = document.createElement("div");
-                    header.innerHTML = content;
-                    header.style.backgroundColor='black';
-                    document.body.prepend(header);
-                });
-        </script>
-        </br>
-        <script>
-            // Fetch and insert footer content
-            fetch("footer.html")
-                .then((response) => response.text())
-                .then((content) => {
-                    const footer = document.createElement("div");
-                    footer.innerHTML = content;
-                    document.body.appendChild(footer);
-                });
-        </script>
+       <script>
+        // Fetch and insert header content
+        fetch("header.html")
+            .then((response) => response.text())
+            .then((content) => {
+                const header = document.createElement("div");
+                header.innerHTML = content;
+                header.style.backgroundColor = 'black';  // Custom background color
+                document.body.prepend(header);
+            });
+
+        // Fetch and insert footer content
+        fetch("footer.html")
+            .then((response) => response.text())
+            .then((content) => {
+                const footer = document.createElement("div");
+                footer.innerHTML = content;
+                document.body.appendChild(footer);
+            });
+    </script>
+
+    <!-- Services -->
+    <section class="" style="background-color: white">
+        <h1 class="serv">Services</h1>
+        <div id="feature" class="div-p1">
+            <div class="fe-box">
+                <img src="../pic/services Png/f1.png" alt="" />
+                <h6>Free Shipping</h6>
+            </div>
+            <div class="fe-box">
+                <img src="../pic/services Png/f2.png" alt="" />
+                <h6>Online Order</h6>
+            </div>
+            <div class="fe-box">
+                <img src="../pic/services Png/f3.png" alt="" />
+                <h6>Save Money</h6>
+            </div>
+            <div class="fe-box">
+                <img src="../pic/services Png/f4.png" alt="" />
+                <h6>Promotions</h6>
+            </div>
+            <div class="fe-box">
+                <img src="../pic/services Png/f5.png" alt="" />
+                <h6>Happy Sell</h6>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product -->
+    <section class="product-section" style="background-color: white">
+        <h1 class="serv">Our Products</h1>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="../pic/Cement Elevator Wing Pulley.jpg" alt="Product 1" class="product-image" />
+                <div class="product-details">
+                    <h4>Product Name 1</h4>
+                    <p class="product-description">
+                        This is a brief description of Product 1. It highlights key features and benefits.
+                    </p>
+                    <button class="button-buy">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../pic/Cement Elevator Wing Pulley.jpg" alt="Product 2" class="product-image" />
+                <div class="product-details">
+                    <h4>Product Name 2</h4>
+                    <p class="product-description">
+                        This is a brief description of Product 2. It highlights key features and benefits.
+                    </p>
+                    <button class="button-buy">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../pic/Cement Elevator Wing Pulley.jpg" alt="Product 3" class="product-image" />
+                <div class="product-details">
+                    <h4>Product Name 3</h4>
+                    <p class="product-description">
+                        This is a brief description of Product 3. It highlights key features and benefits.
+                    </p>
+                    <button class="button-buy">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </body>
 </html>
