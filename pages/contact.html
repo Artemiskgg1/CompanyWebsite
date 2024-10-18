@@ -39,6 +39,56 @@
                 footer.innerHTML = content;
                 document.body.appendChild(footer);
             });
+
+        const sendEmail = (e) => {
+            e.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            // Regular expression for email validation
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            // Regular expression for phone number (10 digits)
+            const phonePattern = /^\d{10}$/;
+            // Regular expression for name (should not be just numbers)
+            const namePattern = /^[a-zA-Z\s]+$/;
+
+            // Validate Name (at least 2 characters, no numbers)
+            if (name.length < 2 || !namePattern.test(name)) {
+                alert("Please enter a valid name (at least 2 characters and no numbers).");
+                return;
+            }
+
+            // Validate Email
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Validate Phone (10 digits required)
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return;
+            }
+
+            // Validate Message (should not be empty, at least 10 characters)
+            if (message.length < 10) {
+                alert("Please enter a message of at least 10 characters.");
+                return;
+            }
+
+            // If validation passes, send the email
+            alert("Validation passed! Sending email...");
+
+            // Here you can place the code to send the email via SMTPJS or any other service
+            // e.g., Email.send({...});
+
+            // Reset form after sending
+            document.querySelector("form").reset();
+        };
     </script>
     <h1 class="main-heading">CONTACT US</h1>
     <div class="container">
@@ -69,12 +119,12 @@
                 </div>
             </div>
         </section>
-        <form onsubmit="sendEmail(); reset(); return false;">
+        <form onsubmit="sendEmail(event);">
             <h3>GET IN TOUCH</h3>
             <input type="text" id="name" placeholder="Your Name" required />
             <input type="email" id="email" placeholder="E-mail" required />
             <input type="text" id="phone" placeholder="Phone Number" required />
-            <textarea id="message" rows="4" placeholder="Write Message"></textarea>
+            <textarea id="message" rows="4" placeholder="Write Message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </div>
