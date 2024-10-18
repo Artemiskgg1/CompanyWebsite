@@ -1,0 +1,22 @@
+{
+    "link":{
+        "onHoverColor":"skyblue",
+        "shadow":{
+            "xoffset":"0",
+            "yoffset":"0",
+            "blurRadius":"5px",
+            "color":"transparent"
+        }
+    },
+    "button":{
+        "onHoverColor":"skyblue",
+        "onHoverBgColor":"black",
+        "shadow":{
+            "xoffset":"0",
+            "yoffset":"0",
+            "blurRadius":"5px",
+            "spread":"0",
+            "color":"black"
+        }
+    }
+}

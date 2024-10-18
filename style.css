@@ -29,6 +29,20 @@ img {
 *::after,
 *::before {
   box-sizing: border-box;
+  cursor: none !important; 
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: 1px solid white;
+  pointer-events: none;
+  transition: width 0.1s ease, height 0.1s ease, border-radius 0.1s ease, transform 0.1s ease, background-color 0.1s ease, border 0.1s ease;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 body {
   margin: 0;
@@ -37,19 +51,6 @@ body {
   font-family: var(--ff-base);
   font-size: var(--fs-300);
   font-weight: var(--fw-regular);
-  cursor: none;
-}
-
-//add a custom cursor
-.custom-cursor {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: black;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
 }
 
 .hex-container {
