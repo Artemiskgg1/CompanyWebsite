@@ -293,9 +293,16 @@ p.second-para {
   color: #ffffff75;
   width: 13rem;
 }
+
+.about-img-container {
+  position: relative;
+  height: 320px; /* The height of image */
+}
+
 img.about-us-img {
-  margin-left: 48rem;
-  margin-top: -4rem;
+  position: absolute;
+  right: 0;
+  margin-top: -2rem;
   margin-bottom: 0.3rem;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 14% 100%, 0 83%);
 }
