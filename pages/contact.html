@@ -1,19 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shubham Engineers</title>
-    <link rel="stylesheet" href="../CSS/variables.css">
     <link rel="stylesheet" href="../CSS/contact.css" />
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;700&family=Outfit:wght@300;400;700&family=Poppins:wght@100;300;400;600;700&display=swap"
-        rel="stylesheet" />
-    <!-- Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;700&family=Outfit:wght@300;400;700&family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" />
@@ -22,7 +17,6 @@
 
 <body>
     <script>
-        // Fetch and insert header content
         fetch("header.html")
             .then((response) => response.text())
             .then((content) => {
@@ -31,7 +25,6 @@
                 document.body.prepend(header);
             });
 
-        // Fetch and insert footer content
         fetch("footer.html")
             .then((response) => response.text())
             .then((content) => {
@@ -39,87 +32,41 @@
                 footer.innerHTML = content;
                 document.body.appendChild(footer);
             });
-
-        const sendEmail = (e) => {
-            e.preventDefault(); // Prevent form submission
-
-            // Get form values
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            // Regular expression for email validation
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            // Regular expression for phone number (10 digits)
-            const phonePattern = /^\d{10}$/;
-            // Regular expression for name (should not be just numbers)
-            const namePattern = /^[a-zA-Z\s]+$/;
-
-            // Validate Name (at least 2 characters, no numbers)
-            if (name.length < 2 || !namePattern.test(name)) {
-                alert("Please enter a valid name (at least 2 characters and no numbers).");
-                return;
-            }
-
-            // Validate Email
-            if (!emailPattern.test(email)) {
-                alert("Please enter a valid email address.");
-                return;
-            }
-
-            // Validate Phone (10 digits required)
-            if (!phonePattern.test(phone)) {
-                alert("Please enter a valid 10-digit phone number.");
-                return;
-            }
-
-            // Validate Message (should not be empty, at least 10 characters)
-            if (message.length < 10) {
-                alert("Please enter a message of at least 10 characters.");
-                return;
-            }
-
-            // If validation passes, send the email
-            alert("Validation passed! Sending email...");
-
-            // Here you can place the code to send the email via SMTPJS or any other service
-            // e.g., Email.send({...});
-
-            // Reset form after sending
-            document.querySelector("form").reset();
-        };
     </script>
+    
+
     <h1 class="main-heading">CONTACT US</h1>
     <div class="container">
         <section class="getInTouch">
-            <div class="contact-item">
-                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/visit.png" alt="visit" class="icons" />
-                <div class="contact-details">
-                    <h4>Office</h4>
-                    <p>
-                        Hogsmede<br />Hogwards School of Witchcraft and
-                        Wizardry<br />London<br />1022017
-                    </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/visit.png" alt="visit" class="icons" />
+                    <div class="contact-text">
+                        <h4>Office</h4>
+                        <p>
+                            Hogsmede<br />Hogwarts School of Witchcraft and Wizardry<br />London<br />1022017
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-item">
-                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/mail.png" alt="mail" class="icons" />
-                <div class="contact-details">
-                    <h4>Email Address</h4>
-                    <p>artemisgarth@gmail.com</p>
+                <div class="contact-item">
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/mail.png" alt="mail" class="icons" />
+                    <div class="contact-text">
+                        <h4>Email Address</h4>
+                        <p>artemisgarth@gmail.com</p>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-item">
-                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/phone-disconnected.png"
-                    alt="phone-disconnected" class="icons" />
-                <div class="contact-details">
-                    <h4>Call Us</h4>
-                    <p>+91 98XXXXXXXX</p>
+                <div class="contact-item">
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/phone-disconnected.png" alt="phone-disconnected" class="icons" />
+                    <div class="contact-text">
+                        <h4>Call Us</h4>
+                        <a href="tel:+9198XXXXXXXX" class="phone-number">+91 98XXXXXXXX</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <form onsubmit="sendEmail(event);">
+        
+
+        <form onsubmit="sendEmail(); reset(); return false;">
             <h3>GET IN TOUCH</h3>
             <input type="text" id="name" placeholder="Your Name" required />
             <input type="email" id="email" placeholder="E-mail" required />
@@ -127,9 +74,8 @@
             <textarea id="message" rows="4" placeholder="Write Message" required></textarea>
             <button type="submit">Send</button>
         </form>
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="../script.js"></script>
-</body>
+        
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
 </html>

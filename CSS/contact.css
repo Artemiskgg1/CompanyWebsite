@@ -1,132 +1,207 @@
-@import "variables.css";
+:root {
+  --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  --clr-primary-800: hsla(229, 47%, 17%, 1);
+  --clr-primary-700: hsla(229, 43%, 20%, 1);
+  --clr-primary-400: hsla(230, 50%, 58%, 0.3);
+  --clr-accent-400: rgb(28, 29, 30);
+  --clr-secondary-400: hsla(229, 78%, 60%, 1);
+  
+  --ff-heading: 'Chakra Petch', sans-serif;
+  --ff-base: 'Outfit', sans-serif;
+  
+  --fw-regular: 300;
+  --fw-semi-bold: 400;
+  --fw-bold: 700;
+  
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: clamp(5rem, 10vw - 0.5rem, 3.25rem);
+}
 
 body {
   margin: 0;
-  background-color: var(--clr-neutral-100);
-  color: var(--clr-accent-400);
+  background: hsla(229, 47%, 17%, 1);
+  color: var(--clr-neutral-100);
   font-family: var(--ff-base);
   font-size: var(--fs-300);
   font-weight: var(--fw-regular);
-  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Position relative for pseudo-element */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.container:hover {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Inner shadow on hover */
+}
+
+.container:hover::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border-radius: 10px; /* Match the container's border radius */
+  background: rgba(0, 0, 0, 0.628); /* Black blur effect */
+  filter: blur(20px); /* Blur effect */
+  z-index: -1; /* Send behind the container */
 }
 
 .main-heading {
   text-align: center;
   font-family: var(--ff-heading);
-  margin: 2rem 0;
-  color: var(--clr-accent-400);
+  color: hsla(0, 0%, 100%, 1);
+  margin-bottom: 1rem;
 }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+.main-heading:hover {
+  color: hsla(229, 78%, 60%, 1);
 }
 
 .getInTouch {
-  flex: 1 1 300px;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 40%; /* Set width for the contact info section */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 1.5rem; /* Space between each contact item */
+  width: 100%; /* Make it full width */
 }
 
 .contact-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
+  display: flex; /* Use flex for horizontal alignment */
+  align-items: center; /* Center align items vertically */
+  padding: 1rem; /* Padding around items */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-text {
+  margin-left: 1rem;
+  color: black; /* Space between icon and text */
+}
+
+.contact-text h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.contact-text p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .icons {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-
-.contact-details h4 {
-  margin: 0 0 0.5rem;
-  font-family: var(--ff-heading);
-  color: var(--clr-accent-400);
-}
-
-.contact-details p {
-  margin: 0;
+  width: 50px;
+  height: 50px;
 }
 
 form {
-  flex: 1 1 300px;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Set width for the form section */
+  margin: auto; /* Center the form */
+  background: rgba(255, 255, 255, 0.9); /* Background for the form */
+  border-radius: 10px; /* Rounded corners for the form */
+  padding: 2rem; /* Padding around the form */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 form h3 {
-  color: var(--clr-accent-400);
+  color: var(--clr-primary-700);
   font-family: var(--ff-heading);
   font-weight: 800;
-  margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px;
 }
 
 form input,
 form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 15px;
+  outline: none;
   background: #f5f5f5;
   font-size: 16px;
-  transition: border-color 0.3s ease;
+  border-radius: 10px; /* Rounded corners for inputs */
+  transition: background 0.3s; /* Smooth transition */
+  position: relative; /* Position for pseudo-element */
 }
 
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: var(--clr-accent-400);
+form input::before,
+form textarea::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px; /* Match the input border radius */
+  background: rgba(0, 0, 0, 0.8); /* Dark background */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 128, 0.2)); /* Dark gradient */
+  filter: blur(5px); /* Blur effect */
+  opacity: 0; /* Initially hidden */
+  z-index: -1; /* Place behind the input */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+form input:hover::before,
+form textarea:hover::before {
+  opacity: 1; /* Show on hover */
+}
+
+form input:hover,
+form textarea:hover {
+  background: rgba(255, 255, 255, 0.9); /* Light background on hover */
+  color: #000; /* Change text color */
 }
 
 form button {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  background: var(--clr-accent-400);
+  padding: 15px;
+  background:  hsla(229, 47%, 17%, 1) ; /* Original background */
   color: #fff;
   font-size: 18px;
   border: none;
-  border-radius: 5px;
+  outline: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 20px; /* Rounded corners for the button */
+  width: 50%; /* Button width is half of input field */
+  margin: 10px 0; /* Space above and below the button */
+  align-self: center; /* Center the button */
+  transition: background 0.3s; /* Smooth transition */
+}
+  form button:hover {
+      background:  hsla(229, 47%, 25%, 0.95); /* Gradient based on the hsla color */
+      color: #fff; /* Keep text color white */
+  
 }
 
-form button:hover {
-  background-color: var(--clr-accent-500);
+.phone-number {
+  color: var(--clr-primary-700);
+  text-decoration: none;
+  font-weight: var(--fw-semi-bold); /* Slightly bolder for emphasis */
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .getInTouch,
-  form {
-    flex-basis: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 1rem;
-  }
-
-  .getInTouch,
-  form {
-    padding: 1.5rem;
-  }
-}
+.phone-number:hover {
+  text-decoration: underline;
+} 
