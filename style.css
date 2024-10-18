@@ -29,6 +29,7 @@ img {
 *::after,
 *::before {
   box-sizing: border-box;
+  cursor: none !important; 
 }
 
 .custom-cursor {
@@ -63,140 +64,78 @@ body {
   clip-path: polygon(0% 0%, 100% 0, 100% 86%, 95% 100%, 0% 100%);
 }
 
-header {
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,-0.3)),url('/pic/Factory_Shed.jpg');    
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
 .upper-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 3rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 80px;
 }
-
+.upper-navbar a {
+  width: fit-content;
+}
 .logo {
-  position: relative; /* Positioning context for the pseudo-element */
-  display: inline-block; /* Ensure it wraps around the logo without extra space */
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  margin-left: 3rem;
+  height: 100px;
 }
-
-.logo:hover {
-  transform: scale(1.1); /* Scale up the logo slightly */
-}
-
-.logo img {
-  height: 80px; /* Consistent logo height */
-  transition: transform 0.3s ease; /* Smooth transition for image scaling */
-}
-
-.logo:hover img {
-  transform: scale(1.1); /* Scale up the image slightly */
-}
-
-
 .contact-info {
-    display: flex;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 8rem 7rem;
+  align-items: center;
+  height: 49px;
+  gap: 20px;
 }
-
-.phone-number {
-    margin-right: 1rem; /* Spacing between phone number and button */
-}
-
 .button-contact {
-  padding: 0.5rem 1rem;
+  padding: 0.7rem;
   border: 2px solid rgba(255, 243, 243, 0.586);
   border-radius: 5px;
   background-color: transparent;
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
-  text-align: center;
-  position: relative; /* Required for pseudo-element */
-  overflow: hidden; /* Ensures blur stays within the button */
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button-contact:hover {
+  background-color: var(--clr-secondary-400);
+}
+nav {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0.5%;
+  height: fit-content;
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+nav li a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
-.button-contact::before {
+nav li a::after {
   content: '';
   position: absolute;
-  top: -4px; /* Adjust to create the blur effect */
-  left: -4px; /* Adjust to create the blur effect */
-  right: -4px; /* Adjust to create the blur effect */
-  bottom: -4px; /* Adjust to create the blur effect */
-  background-color: rgba(255, 255, 255, 0.5); /* White background with some transparency */
-  filter: blur(8px); /* Blur effect */
-  opacity: 0; /* Start invisible */
-  transition: opacity 0.3s ease; /* Smooth transition */
-  z-index: 0; /* Behind the button */
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--clr-secondary-400);
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
-.button-contact:hover::before {
-  opacity: 1; /* Show blur effect on hover */
+nav li a:hover {
+  color: var(--clr-secondary-400);
 }
 
-.button-contact:hover {
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, -0.3)), url('/pic/Factory_Shed.jpg');
-  background-size: cover; /* Ensure the image covers the button */
-  background-position: center; /* Center the background image */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  color: #fff; /* Change text color for better contrast */
-  z-index: 1; /* Bring button text in front of the blur */
+nav li a:hover::after {
+  width: 100%;
+  left: 0;
 }
-
-
-nav {
-    background-color: #e3e3e3; /* Light gray background for nav */
-    padding: 10px 3rem;
-}
-
-.nav-list {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.nav-list li {
-    position: relative;
-}
-
-.nav-list li a {
-    text-decoration: none;
-    color: #000000; /* Darker text for contrast */
-    padding: 10px 15px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-.nav-list li a:hover {
-  background-color: hsla(229, 47%, 17%, 1) ;
-    border-bottom: 2px solid var(--clr-secondary-400); /* Underline effect */
-    color: white;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .upper-navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .nav-list {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-list li {
-        padding: 5px 0;
-    }
-}
-
-
-
-
-
 
 .heading-grid {
   display: grid;

@@ -1,97 +1,45 @@
- :root {
-    --clr-neutral-100: hsla(0, 0%, 100%, 1);
-    --clr-primary-800: hsla(229, 47%, 17%, 1);
-    --clr-primary-700: hsla(229, 43%, 20%, 1);
-    --clr-primary-400: hsla(230, 50%, 58%, 0.3);
-    --clr-secondary-400: hsla(229, 78%, 60%, 1);
-    --ff-heading: 'Chakra Petch', sans-serif;
-    --ff-base: 'Outfit', sans-serif;
-    --fw-regular: 300;
-    --fw-bold: 700;
-    --fs-300: 1rem;
-}
+@import 'variables.css';
 
 html {
     margin: 0;
-    padding: 0;
+    padding: 0; 
     width: 100%;
 }
 
-body {
+img{
+    max-width: 100%;
+    display: block;
+  
+}
+  *,
+  *::after,
+  *::before{
+    box-sizing: border-box;
+}
+body{
     margin: 0;
-    background: hsla(229, 47%, 17%, 1);
-    color: var(--clr-primary-800);
+    background-color: #eee;
+    color: var(--clr-accent-400);
     font-family: var(--ff-base);
-    font-size: var(--fs-300);
+    font-size: var(--fs-300) ;
+    font-weight: var(--fw-regular);
 }
-
-.main-heading {
-    text-align: center;
-    font-family: var(--ff-heading);
-    margin: 2rem 0;
-    transition: color 0.3s ease;
-    color: white;
-}
-
-.main-heading:hover {
-    color: hsla(229, 78%, 60%, 1);
-}
-
-.paragraph {
-    padding: 30px 0;
-    margin: 0 7rem;
+.main-heading{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    transition: box-shadow 0.3s ease;
-    position: relative;
-}
-
-.column {
-    flex: 1 1 calc(30% - 20px); /* Responsive columns */
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.column:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.column-title {
-    border-left: 3px solid var(--clr-secondary-400);
-    padding-left: 1rem;
-    margin-bottom: 10px;
-}
-
-.column-title h2 {
+    justify-content: center;
     font-family: var(--ff-heading);
-    transition: color 0.3s ease;
 }
-
-.column-title h2:hover {
-    color: var(--clr-secondary-400);
+.paragraph{
+    padding: 30px 0;
+    margin: 0 7rem 0 7rem;
 }
-
-.paragraph p, .paragraph ol {
+.paragraph p{
     margin-top: 14px;
     margin-bottom: 26px;
     font-family: var(--ff-base);
-    transition: color 0.3s ease;
 }
-
-.paragraph p:hover, .paragraph ol:hover {
-    color: var(--clr-primary-700);
-}
-
-@media (max-width: 768px) {
-    .paragraph {
-        margin: 0 2rem; /* Adjust margins on smaller screens */
-    }
-    .column {
-        flex: 1 1 100%; /* Stacking columns on smaller screens */
-    }
+.paragraph h2{
+    font-family: var(--ff-heading);
+    border-left: 3px solid var(--clr-secondary-400);
+    padding-left: 1rem;
 }
