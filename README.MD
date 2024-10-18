@@ -38,8 +38,8 @@ Interested in making some changes or suggesting ideas? Check out the [CONTRIBUTI
 
 <h2 align = "center">Our Contributors ❤️</h2>
 
-<a href="https://github.com/Artemiskgg1/NexaSite/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Artemiskgg1/NexaSite" />
+<a href="https://github.com/artemiskgg1/NexaSite/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=artemiskgg1/NexaSite" />
 </a>
 
 <hr>
