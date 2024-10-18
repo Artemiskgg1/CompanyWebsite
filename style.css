@@ -37,7 +37,21 @@ body {
   font-family: var(--ff-base);
   font-size: var(--fs-300);
   font-weight: var(--fw-regular);
+  cursor: none;
 }
+
+//add a custom cursor
+.custom-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
 .hex-container {
   width: 95%;
   display: grid;
