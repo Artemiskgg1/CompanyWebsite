@@ -185,5 +185,17 @@
                 </div>
             </div>
         </footer>
+        <script>
+        // Select the custom cursor element
+        const customCursor = document.querySelector('.custom-cursor');
+
+        // Add an event listener to track mouse movements
+        document.addEventListener('mousemove', (e) => {
+            // Update the position of the custom cursor
+            customCursor.style.left = e.pageX + 'px'; 
+            customCursor.style.top = e.pageY + 'px';  
+        });
+    </script>
+
     </body>
 </html>
