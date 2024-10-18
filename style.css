@@ -66,6 +66,7 @@ body {
   grid-template-columns: 8rem 7rem;
   align-items: center;
   height: 49px;
+  gap: 20px;
 }
 .button-contact {
   padding: 0.7rem;
