@@ -1,3 +1,6 @@
+@import "../style.css";
+
+
 :root{
     --clr-neutral-100: hsla(0, 0%, 100%, 1);
     --clr-primary-800: hsla(229, 47%, 17%, 1);
